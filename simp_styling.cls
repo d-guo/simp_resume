@@ -1,51 +1,38 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV - RESUME CLASS FILE
+% simple resume template - class file
 %
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
+% this .cls file defines the styling for the simple resume
 %
-% This class file defines the structure and design of the template.
+% author: Daniel Guo
 %
-% Original header:
-% Copyright (C) 2010 by Trey Hunner
+% link: https://github.com/d-guo/simp_resume
 %
-% Copying and distribution of this file, with or without modification,
-% are permitted in any medium without royalty provided the copyright
-% notice and this notice are preserved. This file is offered as-is,
-% without any warranty.
-%
-% Created by Trey Hunner and modified by www.LaTeXTemplates.com
-%
+% based on Trey Hunner's resume template
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{simp_styling}[2020/08/19 simple resume class]
 
-\LoadClass[11pt, letterpaper]{article} % Font size and paper type
+\LoadClass[11pt, letterpaper]{article}
 
-\usepackage{parskip} % Remove paragraph indentation
-\usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
-\usepackage{ifthen} % Required for ifthenelse statements
-\usepackage{hyperref} % Required for hyperlinks
-\usepackage{xcolor}
+\usepackage{parskip} % removes paragraph indentation
+\usepackage{array} % for bold column in tabular
+\usepackage{ifthen} % preventing displaying blank space
+\usepackage{hyperref} % for hyperlinks
+\usepackage{xcolor} % for coloring text
 
-\pagestyle{empty} % Suppress page numbers
+\pagestyle{empty} % no page numbers
 
 %----------------------------------------------------------------------------------------
-%       HEADINGS COMMANDS: Commands for printing name and byline info
+%        for printing heading name and byline
 %----------------------------------------------------------------------------------------
 
-\newcommand{\name}[1]{\def \@name{#1}} % Defines the \name command to set name
-\def \@name{} % Sets \@name to empty by default
+\newcommand{\name}[1]{\def \@name{#1}}
+\def \@name{}
 
 \newcommand{\byline}[1]{\def \@byline{#1}}
 \def \@byline{}
 
-%----------------------------------------------------------------------------------------
-%       PRINT THE HEADING LINES
-%----------------------------------------------------------------------------------------
-
-% \printaddress is used to style an address line (given as input)
 \newcommand{\printbyline}{
 \vspace{-1mm}
 \begin{center}
@@ -54,7 +41,6 @@
 \vspace{-2mm}
 }
 
-% \printname is used to print the name as a page header
 \newcommand{\printname}{
 \begin{center}
 \MakeUppercase{\huge \bf \@name}
@@ -62,14 +48,13 @@
 }
 
 %----------------------------------------------------------------------------------------
-%       SECTION FORMATTING
+%        for title of sections
 %----------------------------------------------------------------------------------------
 
-% Defines the rSection environment for the large sections within the CV
 \newcommand{\rSection}[1]{\MakeUppercase{\bf #1} \vspace{1mm} \hrule \vspace{0.2mm}}
 
 %----------------------------------------------------------------------------------------
-%       SUBSECTION FORMATTING
+%        for subsection environments
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{
@@ -86,7 +71,7 @@
 }
 
 %----------------------------------------------------------------------------------------
-%       EDUCATION FORMATTING
+%        for education environment
 %----------------------------------------------------------------------------------------
 
 % Defines the rSection environment for the large sections within the CV
@@ -96,5 +81,3 @@
 \vspace{-5mm} \\
 }
 {}
-
-

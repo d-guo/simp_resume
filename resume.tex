@@ -1,21 +1,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% simp_resume is a simple resume with three main types of sections defined in simp_styling
+% simp_resume is a simple resume:
+%    the main types of sections are rSubsection and education
+%    skills is defined using a tabular environment
+%    other is defined with raw formatting
 %
-% LaTeX Template
+% compile with pdfLaTeX
 %
+% author: Daniel Guo
 %
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
+% link: https://github.com/d-guo/simp_resume
 %
-% Original author:
-% Trey Hunner (http://www.treyhunner.com/)
-%
-%
-%
+% based on Trey Hunner's resume template
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-%       PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%        configs
 %----------------------------------------------------------------------------------------
 
 \documentclass[hidelinks]{simp_styling} % Use the custom resume.cls style
@@ -30,7 +29,7 @@
 \printbyline
 
 %----------------------------------------------------------------------------------------
-%       EDUCATION SECTION
+%        education
 %----------------------------------------------------------------------------------------
 
 \rSection{Education}
@@ -39,7 +38,7 @@
 Relevant Coursework: course1, course2, ..., course10
 \end{rEducation}
 %----------------------------------------------------------------------------------------
-%       EXPERIENCE SECTION
+%        experience
 %----------------------------------------------------------------------------------------
 
 \rSection{Experience}
@@ -54,7 +53,7 @@ Relevant Coursework: course1, course2, ..., course10
 \end{rSubsection}
 
 %----------------------------------------------------------------------------------------
-%       PROJECTS SECTION
+%        projects
 %----------------------------------------------------------------------------------------
 
 \rSection{Projects}
@@ -75,7 +74,7 @@ Relevant Coursework: course1, course2, ..., course10
 \end{rSubsection}
 
 %----------------------------------------------------------------------------------------
-%       TECHNICAL SKILLS
+%        skills
 %----------------------------------------------------------------------------------------
 
 \rSection{Skills}
@@ -88,7 +87,7 @@ Technologies & technologies list
 \vspace{1mm}
 
 %----------------------------------------------------------------------------------------
-%       INVOLVEMENTS SECTION
+%        involvements
 %----------------------------------------------------------------------------------------
 
 \rSection{Involvements}
@@ -110,7 +109,7 @@ Technologies & technologies list
 \end{rSubsection}
 
 %----------------------------------------------------------------------------------------
-%       OTHER ACHIEVEMENTS & ACTIVITIES SECTION
+%        others
 %----------------------------------------------------------------------------------------
 
 \rSection{Other Achievements \& Activities}
