@@ -47,9 +47,11 @@
 
 % \printaddress is used to style an address line (given as input)
 \newcommand{\printbyline}{
+\vspace{-1mm}
 \begin{center}
 \@byline
 \end{center}
+\vspace{-2mm}
 }
 
 % \printname is used to print the name as a page header
