@@ -75,9 +75,10 @@
 %----------------------------------------------------------------------------------------
 
 % Defines the rSection environment for the large sections within the CV
-\newenvironment{rEducation}[4]{
+\newenvironment{rEducation}[5]{
 {\bf #1} \hfill {#2} \\
 \hspace*{2mm} #3 \hfill {#4} \\
-\vspace{-5mm} \\
+\vspace{-5mm}
+\ifthenelse{\not \equal{#5}{}}{\\}{}
 }
 {}
