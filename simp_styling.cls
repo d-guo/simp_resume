@@ -70,20 +70,29 @@
 %       SUBSECTION FORMATTING
 %----------------------------------------------------------------------------------------
 
-\newenvironment{rSubsection}[5]{
-\def \@techlist{#4}
+\newenvironment{rSubsection}[4]{
+\def \@flag{#4}
 {\bf #1} {\textcolor{darkgray}{#2}} \hfill {#3 \\ \vspace{-5mm}}
-\ifthenelse{\not \equal{#4}{}}{{\\ \hspace*{2.5mm} \textcolor{gray}{#4}} \hfill {\textcolor{darkgray}{#5}} \\ \vspace{-5mm}}{}
 \ifthenelse{\not \equal{#4}{}}{
 \vspace{-1.5mm}
 \begin{list}{$\cdot$}{\leftmargin=3mm}
 \itemsep -1.5mm}{}
 }
 {
-\ifthenelse{\not \equal{\@techlist}{}}{
+\ifthenelse{\not \equal{\@flag}{}}{
 \end{list}}{}
 }
 
 %----------------------------------------------------------------------------------------
-%       SKILLS FORMATTING
+%       EDUCATION FORMATTING
 %----------------------------------------------------------------------------------------
+
+% Defines the rSection environment for the large sections within the CV
+\newenvironment{rEducation}[4]{
+{\bf #1} \hfill {#2} \\
+\hspace*{2mm} #3 \hfill {#4} \\
+\vspace{-5mm} \\
+}
+{}
+
+
