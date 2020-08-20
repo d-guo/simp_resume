@@ -63,7 +63,7 @@
 \ifthenelse{\not \equal{#4}{}}{
 \vspace{-1.5mm}
 \begin{list}{$\cdot$}{\leftmargin=3mm}
-\itemsep -1.5mm}{}
+\itemsep -2mm}{}
 }
 {
 \ifthenelse{\not \equal{\@flag}{}}{
