@@ -78,7 +78,7 @@
 \newenvironment{rEducation}[5]{
 {\bf #1} \hfill {#2} \\
 \hspace*{2mm} #3 \hfill {#4} \\
-\vspace{-5mm}
+\vspace{-4mm}
 \ifthenelse{\not \equal{#5}{}}{\\}{}
 }
 {}
