@@ -38,7 +38,7 @@
 \begin{center}
 \@byline
 \end{center}
-\vspace{-2mm}
+\vspace{-1mm}
 }
 
 \newcommand{\printname}{
@@ -51,7 +51,7 @@
 %        for title of sections
 %----------------------------------------------------------------------------------------
 
-\newcommand{\rSection}[1]{\MakeUppercase{\bf #1} \vspace{1mm} \hrule \vspace{0.2mm}}
+\newcommand{\rSection}[1]{\vspace{0.5mm} \MakeUppercase{\bf #1} \vspace{1mm} \hrule \vspace{0.2mm}}
 
 %----------------------------------------------------------------------------------------
 %        for subsection environments
@@ -59,15 +59,15 @@
 
 \newenvironment{rSubsection}[4]{
 \def \@flag{#4}
-{\bf #1} {\textcolor{darkgray}{#2}} \hfill {#3 \\ \vspace{-5mm}}
+{\bf #1} {#2} \hfill {#3} \\
 \ifthenelse{\not \equal{#4}{}}{
-\vspace{-1.5mm}
+\vspace{-8mm}
+\small
 \begin{list}{$\cdot$}{\leftmargin=3mm}
-\itemsep -2mm}{}
+\itemsep -1mm}{}
 }
 {
-\ifthenelse{\not \equal{\@flag}{}}{
-\end{list}}{}
+\ifthenelse{\not \equal{\@flag}{}}{\end{list}\vspace{-2mm}}{\vspace{-4mm}}
 }
 
 %----------------------------------------------------------------------------------------
@@ -76,9 +76,10 @@
 
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rEducation}[5]{
+\def \@courseworkflag{#5}
 {\bf #1} \hfill {#2} \\
-\hspace*{2mm} #3 \hfill {#4} \\
-\vspace{-4mm}
-\ifthenelse{\not \equal{#5}{}}{\\}{}
+{\small \hspace*{2mm} #3 \hfill {#4}} \\
+\vspace{-5mm}
+\ifthenelse{\not \equal{\@courseworkflag}{}}{\\}{}
 }
 {}
